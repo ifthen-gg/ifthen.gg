@@ -7,6 +7,7 @@
     "serve": "vite preview",
     "prepare": "husky install",
     "lint": "eslint . && stylelint \"**/*.css\"",
+    "prettier": "prettier --check .",
     "test": "npm run lint && npm run prettier"
   },
   "dependencies": {
