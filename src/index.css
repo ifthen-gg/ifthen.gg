@@ -1,13 +1,60 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./assets/fonts/RobotoMono-Regular.ttf") format("truetype");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./assets/fonts/Lato-Regular.ttf") format("truetype");
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colors: */
+  --fancy-gradient: linear-gradient(
+    270deg,
+    #ffd33d 0%,
+    #fb8532 22%,
+    #ea4a5a 46%,
+    #8a63d2 64%,
+    #2188ff 82%,
+    #34d058 100%
+  );
+  --hint-color: #77777a;
+  --primary-background-color: #2b2a30;
+  --secondary-background-color: #3f3e43;
+  --hover-color: #484848;
+  --disabled-background-color: #3a3d44;
+  --aside-background-color: #1f1f1f;
+  --text-color: #eaeaea;
+
+  /* Fonts */
+  --primary-font-family: "Roboto Mono", monospace;
+  --secondary-font-family: "Lato", sans-serif;
+}
+
+body {
+  margin: 0;
+  color: var(--text-color);
+  background-color: var(--primary-background-color);
+  font-family: var(--secondary-font-family);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--primary-font-family);
 }
