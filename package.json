@@ -9,7 +9,8 @@
     "lint": "eslint . && stylelint \"**/*.css\"",
     "prettier": "prettier --check .",
     "jest": "jest",
-    "test": "npm run lint && npm run prettier && npm run jest"
+    "typecheck": "tsc",
+    "test": "npm run lint && npm run prettier && npm run tsc && npm run jest"
   },
   "dependencies": {
     "react": "^17.0.0",
