@@ -10,7 +10,7 @@
     "prettier": "prettier --check .",
     "jest": "jest",
     "typecheck": "tsc",
-    "test": "npm run lint && npm run prettier && npm run tsc && npm run jest",
+    "test": "npm run lint && npm run prettier && npm run typecheck && npm run jest",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
