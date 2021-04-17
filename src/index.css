@@ -44,6 +44,10 @@
   --secondary-font-family: "Lato", sans-serif;
 }
 
+html {
+  font-size: 18px;
+}
+
 body {
   margin: 0;
   color: var(--text-color);
