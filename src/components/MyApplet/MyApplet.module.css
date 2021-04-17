@@ -6,6 +6,7 @@
 }
 
 .switch {
+  cursor: pointer;
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 50px;
   width: 4.2em;
