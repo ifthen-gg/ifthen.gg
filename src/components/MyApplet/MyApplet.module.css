@@ -1,0 +1,60 @@
+.container {
+  padding: 1em 6em 1em 1em;
+  background-color: var(--disabled-background-color);
+  transition: 0.5s background-color;
+  position: relative;
+}
+
+.switch {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+  width: 4.2em;
+  height: 1.6em;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  text-transform: uppercase;
+  position: absolute;
+  right: 0.5em;
+  bottom: 0.5em;
+  font-size: 0.8em;
+}
+
+.switch input {
+  display: none;
+}
+
+.switch div {
+  position: relative;
+  width: 1.2em;
+  height: 1.2em;
+  display: inline-block;
+  background-color: var(--disabled-background-color);
+  border-radius: 50%;
+  transform: translateX(-1.2em);
+  transition: 0.5s all;
+}
+
+.active div {
+  transform: translateX(1.2em);
+  background-color: currentColor;
+}
+
+.switch div::before,
+.switch div::after {
+  position: absolute;
+  color: var(--text-color);
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.switch div::before {
+  content: "On";
+  left: -2.2em;
+}
+
+.switch div::after {
+  content: "Off";
+  left: 1.5em;
+}
