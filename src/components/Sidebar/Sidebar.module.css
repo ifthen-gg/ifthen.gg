@@ -70,8 +70,8 @@
 .settings__content {
   position: absolute;
   bottom: 0;
-  left: 100%;
-  width: calc(100vw - 100% - 1px);
+  left: calc(100% + 1px);
+  width: calc(100vw - 100% - 2px);
   min-height: 200px;
   background-color: var(--primary-background-color);
   border-top: 1px solid var(--text-color);
