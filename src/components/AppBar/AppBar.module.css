@@ -1,0 +1,36 @@
+.appbar {
+  width: 100vw;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: auto 1fr;
+}
+
+.branding__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  z-index: -1;
+}
+.branding {
+  width: 180px;
+  font-size: 1em;
+  margin: 0.6em 0;
+  display: flex;
+  align-content: center;
+  gap: 0.6em;
+  line-height: 1.6em;
+  justify-content: center;
+}
+
+.toolbar {
+  height: 1.7em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: var(--secondary-background-color);
+}
+
+.toolbar * {
+  width: 1.5em;
+}
