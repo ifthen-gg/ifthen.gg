@@ -1,0 +1,27 @@
+.container {
+  width: 10em;
+  height: 10em;
+  padding: 0.8em;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+.container p {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.container a {
+  justify-self: end;
+}
+
+.container svg {
+  opacity: 0.4;
+  stroke: var(--text-color);
+  transition: opacity 0.1s;
+}
+
+.container svg:hover {
+  opacity: 1;
+}
