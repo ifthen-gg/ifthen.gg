@@ -1,0 +1,79 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  height: 100%;
+  width: max-content;
+  border: 1px solid var(--secondary-background-color);
+  background-color: var(--aside-background-color);
+}
+
+.sidebar__link {
+  display: block;
+  padding: 1em;
+  border-bottom: 1px solid var(--secondary-background-color);
+  text-align: center;
+  transition: 0.1s background-color;
+}
+
+.sidebar__link:hover {
+  background-color: var(--hover-color);
+}
+
+.sidebar__link--active {
+  background-color: var(--primary-background-color);
+}
+
+.sidebar__link svg {
+  height: 1.8em;
+  width: auto;
+}
+
+.settings__icon {
+  height: 1em;
+  width: auto;
+  flex-grow: 1;
+  padding: 0.8em 0.5em;
+  box-sizing: content-box;
+  border-right: 1px solid var(--secondary-background-color);
+}
+
+.settings__arrow {
+  box-sizing: content-box;
+  height: 0.5em;
+  width: auto;
+  padding: 0.5em;
+}
+
+.settings[open] .settings__arrow {
+  transform: rotate(180deg);
+}
+
+.settings__summary {
+  list-style: none;
+  border-top: 1px solid var(--secondary-background-color);
+  display: flex;
+  align-items: center;
+  transition: 0.1s background-color;
+  cursor: pointer;
+}
+
+.settings[open] .settings__summary {
+  background-color: var(--primary-background-color);
+}
+
+.settings .settings__summary:hover {
+  background-color: var(--hover-color);
+}
+
+.settings__content {
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  width: calc(100vw - 100% - 1px);
+  min-height: 200px;
+  background-color: var(--primary-background-color);
+  border-top: 1px solid var(--text-color);
+  padding: 1em;
+}
