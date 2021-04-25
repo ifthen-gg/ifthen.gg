@@ -51,6 +51,7 @@ html {
 body {
   margin: 0;
   color: var(--text-color);
+  fill: var(--text-color);
   background-color: var(--primary-background-color);
   font-family: var(--secondary-font-family);
 }
@@ -61,4 +62,10 @@ h3,
 h4,
 h5 {
   font-family: var(--primary-font-family);
+}
+
+a,
+a:active,
+a:visited {
+  color: inherit;
 }
