@@ -10,7 +10,7 @@ function MinimizeIcon(props: React.SVGProps<SVGSVGElement>): JSX.Element {
       fill="currentColor"
       {...props}
     >
-      <path d="M20,19H10v1H20Z" transform="translate(-10 -19)" />
+      <path d="M 0 0 H 10 V 1 H 0 V 0" />
     </svg>
   );
 }
