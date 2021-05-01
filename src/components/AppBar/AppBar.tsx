@@ -25,8 +25,18 @@ function AppBar({ inGame }: AppBarProps): JSX.Element {
       </h1>
 
       <div className={styles.toolbar}>
-        <MinimizeIcon />
-        <CloseIcon />
+        {inGame ? (
+          <div className={styles.tip}>
+            <span className={styles.tip__hidden}>Show/Hide</span> Ctrl+F2
+          </div>
+        ) : (
+          <button className={styles.toolbar__minimize}>
+            <MinimizeIcon />
+          </button>
+        )}
+        <button className={styles.toolbar__close}>
+          <CloseIcon />
+        </button>
       </div>
     </header>
   );

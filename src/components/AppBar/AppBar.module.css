@@ -24,13 +24,43 @@
 }
 
 .toolbar {
+  width: 100%;
   height: 1.7em;
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: end;
+  padding-left: 2em;
+  grid-template-columns: 1fr auto;
   align-items: center;
-  justify-content: flex-end;
   background-color: var(--secondary-background-color);
 }
 
-.toolbar * {
-  width: 1.5em;
+.tip {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.tip__hidden {
+  color: var(--hint-color);
+}
+
+.toolbar__minimize {
+  background: none;
+  border: none;
+  width: 2.5em;
+  color: var(--primary-text-color);
+  height: 100%;
+  justify-self: end;
+  align-self: end;
+}
+
+.toolbar__close {
+  height: 100%;
+  width: 2.5em;
+  background: none;
+  border: none;
+  color: var(--primary-text-color);
+}
+.toolbar__close:hover {
+  background: var(--fancy-gradient);
 }
