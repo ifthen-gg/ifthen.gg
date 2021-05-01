@@ -44,23 +44,19 @@
   color: var(--hint-color);
 }
 
-.toolbar__minimize {
+.toolbar__button {
   background: none;
   border: none;
   width: 2.5em;
   color: var(--primary-text-color);
   height: 100%;
   justify-self: end;
-  align-self: end;
 }
 
-.toolbar__close {
-  height: 100%;
-  width: 2.5em;
-  background: none;
-  border: none;
-  color: var(--primary-text-color);
+.toolbar__button:hover {
+  background: var(--hint-color);
 }
-.toolbar__close:hover {
-  background: var(--fancy-gradient);
+
+.toolbar__button--danger:hover {
+  background: var(--danger-color);
 }

@@ -3,6 +3,7 @@ import styles from "./AppBar.module.css";
 import RainbowKraken from "../icons/RainbowKraken";
 import MinimizeIcon from "../icons/MinimizeIcon";
 import CloseIcon from "../icons/CloseIcon";
+import classNames from "classnames";
 
 export type AppBarProps = {
   inGame: boolean;
@@ -30,11 +31,16 @@ function AppBar({ inGame }: AppBarProps): JSX.Element {
             <span className={styles.tip__hidden}>Show/Hide</span> Ctrl+F2
           </div>
         ) : (
-          <button className={styles.toolbar__minimize}>
+          <button className={styles.toolbar__button}>
             <MinimizeIcon />
           </button>
         )}
-        <button className={styles.toolbar__close}>
+        <button
+          className={classNames(
+            styles.toolbar__button,
+            styles["toolbar__button--danger"]
+          )}
+        >
           <CloseIcon />
         </button>
       </div>

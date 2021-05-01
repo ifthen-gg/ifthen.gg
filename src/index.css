@@ -38,6 +38,7 @@
   --disabled-background-color: #3a3d44;
   --aside-background-color: #1f1f1f;
   --text-color: #eaeaea;
+  --danger-color: #dc2a30;
 
   /* Fonts */
   --primary-font-family: "Roboto Mono", monospace;
@@ -61,4 +62,8 @@ h3,
 h4,
 h5 {
   font-family: var(--primary-font-family);
+}
+
+button {
+  cursor: pointer;
 }
