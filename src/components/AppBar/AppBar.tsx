@@ -11,7 +11,7 @@ export type AppBarProps = {
 
 function AppBar({ inGame }: AppBarProps): JSX.Element {
   return (
-    <header className={styles.appbar}>
+    <header className={styles.appBar}>
       <svg
         className={styles.branding__background}
         viewBox="0 0 200 48"
