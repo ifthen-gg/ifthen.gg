@@ -1,10 +1,17 @@
 import React from "react";
+import styles from "./App.module.css";
+import AppBar from "./components/AppBar/AppBar";
+import Sidebar from "./components/Sidebar/Sidebar";
 
 function App(): JSX.Element {
   return (
-    <div>
-      <h1>ifthen.gg</h1>
-    </div>
+    <>
+      <AppBar />
+      <div className={styles.app}>
+        <Sidebar activeLink="home" />
+        <h1>ifthen.gg</h1>
+      </div>
+    </>
   );
 }
 
