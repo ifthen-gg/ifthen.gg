@@ -11,7 +11,14 @@ export type AppBarProps = {
 
 function AppBar({ inGame }: AppBarProps): JSX.Element {
   return (
-    <header className={styles.appBar}>
+    <header
+      className={styles.appBar}
+      onMouseDown={() => {
+        overwolf.windows.getCurrentWindow((result) => {
+          overwolf.windows.dragMove(result.window.id);
+        });
+      }}
+    >
       <svg
         className={styles.branding__background}
         viewBox="0 0 200 48"
@@ -31,7 +38,14 @@ function AppBar({ inGame }: AppBarProps): JSX.Element {
             <span className={styles.tip__hidden}>Show/Hide</span> Ctrl+F2
           </div>
         ) : (
-          <button className={styles.toolbar__button}>
+          <button
+            className={styles.toolbar__button}
+            onClick={() => {
+              overwolf.windows.getCurrentWindow((result) => {
+                overwolf.windows.minimize(result.window.id);
+              });
+            }}
+          >
             <MinimizeIcon />
           </button>
         )}
@@ -40,6 +54,11 @@ function AppBar({ inGame }: AppBarProps): JSX.Element {
             styles.toolbar__button,
             styles["toolbar__button--danger"]
           )}
+          onClick={() => {
+            overwolf.windows.getCurrentWindow((result) => {
+              overwolf.windows.close(result.window.id);
+            });
+          }}
         >
           <CloseIcon />
         </button>
