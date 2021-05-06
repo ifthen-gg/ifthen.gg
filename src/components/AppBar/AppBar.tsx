@@ -6,7 +6,7 @@ import CloseIcon from "../icons/CloseIcon";
 import classNames from "classnames";
 
 export type AppBarProps = {
-  inGame: boolean;
+  inGame?: boolean;
 };
 
 function AppBar({ inGame }: AppBarProps): JSX.Element {
