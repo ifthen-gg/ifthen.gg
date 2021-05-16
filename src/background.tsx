@@ -3,7 +3,7 @@ import leagueQueue from "./triggers/leagueQueue";
 
 console.log("Starting background process");
 
-leagueQueue.onTrigger((queueId: string) => {
+leagueQueue.onTrigger((queueId) => {
   openWebsite.execute("https://th.gl/");
   console.log(queueId);
   leagueQueue.removeTrigger();
