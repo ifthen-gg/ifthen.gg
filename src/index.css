@@ -74,6 +74,7 @@ h5 {
 
 button {
   cursor: pointer;
+  color: inherit;
 }
 
 a,
