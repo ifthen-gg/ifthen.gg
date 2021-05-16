@@ -44,7 +44,7 @@
       "type": "dedicated",
       "game_ids": []
     },
-    "game_events": [],
+    "game_events": [10902],
     "launch_events": [],
     "hotkeys": {},
     "protocol_override_domains": {
