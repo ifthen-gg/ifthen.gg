@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import apps from "../../apps";
 import AppSelectionIcon from "../icons/AppSelectIcon";
 import SearchIcon from "../icons/SearchIcon";
 import styles from "./SelectTrigger.module.css";
@@ -30,6 +31,14 @@ function SelectTrigger({
             placeholder="Search Games or Apps"
           />
         </label>
+        <section className={styles.appList}>
+          {apps.map((app) => (
+            <button key={app.title} className={styles.appList__item}>
+              {app.title}{" "}
+              <img src={app.imgSrc} alt="" className={styles.appList__image} />
+            </button>
+          ))}
+        </section>
       </div>
     </section>
   );
