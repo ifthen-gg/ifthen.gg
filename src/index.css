@@ -58,6 +58,10 @@ body {
   font-family: var(--secondary-font-family);
 }
 
+#root {
+  height: 100vh;
+}
+
 h1,
 h2,
 h3,

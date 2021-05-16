@@ -1,9 +1,11 @@
 .appBar {
+  position: fixed;
   width: 100vw;
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: auto 1fr;
   font-family: var(--primary-font-family);
+  z-index: 1;
 }
 
 .branding__background {
