@@ -1,7 +1,7 @@
 import type { Trigger } from "./types";
 
 let handleInfoUpdates: ((res: any) => void) | null = null;
-const leagueQueue: Trigger = {
+const leagueQueue: Trigger<string> = {
   title: "League Queue",
   description: "This triggers when League of Legends queue changes",
   onTrigger: (callback) => {
