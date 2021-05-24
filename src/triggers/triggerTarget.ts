@@ -9,12 +9,13 @@ const triggerTarget: TriggerTarget = {
   dispatches: {},
   addEventListener(name, callback) {
     if (!(name in this.listeners)) {
-      this.listeners[name] = [];
+      this.listeners[name] = [callback];
       this.dispatches[name] = triggersObject[name].listen((data) =>
         this.dispatchEvent(name, data)
       );
+    } else {
+      this.listeners[name]!.push(callback);
     }
-    this.listeners[name]!.push(callback);
   },
   removeEventListener(name, callback) {
     if (!(name in this.listeners)) {

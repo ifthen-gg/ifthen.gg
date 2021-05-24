@@ -29,7 +29,23 @@ const leagueQueue: Trigger<string> = {
     overwolf.games.launchers.events.setRequiredFeatures(
       LEAGUE_LAUNCHER_ID,
       REQUIRED_FEATURES,
-      () => {
+      (result) => {
+        if (!result.success) {
+          console.error("[leagueQueue]:", result.error);
+          return;
+        }
+        if (
+          !REQUIRED_FEATURES.every((requiredFeature) =>
+            result.supportedFeatures.includes(requiredFeature)
+          )
+        ) {
+          console.error(
+            "[leagueQueue]: Could not register all required features",
+            result.supportedFeatures
+          );
+          return;
+        }
+
         overwolf.games.launchers.events.onInfoUpdates.addListener(
           handleInfoUpdates
         );
