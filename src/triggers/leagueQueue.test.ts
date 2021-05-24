@@ -4,20 +4,13 @@ function mockLeagueQueue(
   requiredFeaturesResult: overwolf.games.launchers.events.SetRequiredFeaturesResult,
   infoUpdate: unknown
 ) {
-  overwolf.games = {
-    launchers: {
-      // @ts-ignore
-      events: {
-        setRequiredFeatures: jest.fn((launcherClassId, features, callback) =>
-          callback(requiredFeaturesResult)
-        ),
-        onInfoUpdates: {
-          addListener: jest.fn((callback) => callback(infoUpdate)),
-          removeListener: jest.fn(),
-        },
-      },
-    },
-  };
+  overwolf.games.launchers.events.setRequiredFeatures = jest.fn(
+    (launcherClassId, features, callback) => callback(requiredFeaturesResult)
+  );
+  overwolf.games.launchers.events.onInfoUpdates.addListener = jest.fn(
+    (callback) => callback(infoUpdate)
+  );
+  overwolf.games.launchers.events.onInfoUpdates.removeListener = jest.fn();
 }
 
 const originConsoleError = console.error;
@@ -143,5 +136,31 @@ describe("leagueQueue", () => {
     const handleLeagueQueue = jest.fn();
 
     triggerTarget.addEventListener("leagueQueue", handleLeagueQueue);
+  });
+
+  it("clean up after event lisenter is removed", () => {
+    mockLeagueQueue(
+      {
+        success: true,
+        supportedFeatures: ["lobby_info"],
+      },
+      {
+        feature: "lobby_info",
+        info: {
+          lobby_info: {
+            queueId: "440",
+          },
+        },
+      }
+    );
+
+    const handleLeagueQueue = jest.fn();
+
+    triggerTarget.addEventListener("leagueQueue", handleLeagueQueue);
+    triggerTarget.removeEventListener("leagueQueue", handleLeagueQueue);
+
+    expect(
+      overwolf.games.launchers.events.onInfoUpdates.removeListener
+    ).toHaveBeenCalled();
   });
 });
