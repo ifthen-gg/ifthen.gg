@@ -1,4 +1,3 @@
-import type { TriggerName } from "./types";
 export * from "./types";
 export { default as triggerTarget } from "./triggerTarget";
 
@@ -9,4 +8,4 @@ export const triggersObject = {
   leagueQueue,
 };
 
-export const triggerNames = Object.keys(triggersObject) as TriggerName[];
+export const triggers = Object.values(triggersObject);

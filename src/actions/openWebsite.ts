@@ -1,6 +1,9 @@
 import { Action } from "./types";
 
-const openWebsite: Action = {
+export const OPEN_WEBSITE = "openWebsite";
+
+const openWebsite: Action<string> = {
+  name: OPEN_WEBSITE,
   title: "Open Website",
   description: "Opens a website",
   execute: (url) => {

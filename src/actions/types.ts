@@ -1,5 +1,6 @@
-export type Action = {
+export type Action<T> = {
+  name: string;
   title: string;
   description: string;
-  execute: (...args: string[]) => void;
+  execute: (data: T) => void;
 };
