@@ -138,7 +138,7 @@ describe("leagueQueue", () => {
     triggerTarget.addEventListener("leagueQueue", handleLeagueQueue);
   });
 
-  it("clean up after event lisenter is removed", () => {
+  it("cleans up after event listener is removed", () => {
     mockLeagueQueue(
       {
         success: true,
