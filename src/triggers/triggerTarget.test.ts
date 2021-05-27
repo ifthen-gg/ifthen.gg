@@ -1,6 +1,11 @@
 import triggerTarget from "./triggerTarget";
 
 describe("triggerTarget", () => {
+  afterEach(() => {
+    triggerTarget.listeners = {};
+    triggerTarget.cleaners = {};
+  });
+
   it("dispatch event", () => {
     const handleLeagueQueue = jest.fn();
 
@@ -43,5 +48,14 @@ describe("triggerTarget", () => {
     triggerTarget.dispatchEvent("leagueQueue", data);
 
     expect(handleLeagueQueue).toHaveBeenCalledWith(data);
+  });
+
+  it("cleanups after last listener is removed", () => {
+    const handleLeagueQueue = jest.fn();
+    expect(Object.keys(triggerTarget.cleaners).length).toBe(0);
+    triggerTarget.addEventListener("leagueQueue", handleLeagueQueue);
+    expect(Object.keys(triggerTarget.cleaners).length).toBe(1);
+    triggerTarget.removeEventListener("leagueQueue", handleLeagueQueue);
+    expect(Object.keys(triggerTarget.cleaners).length).toBe(0);
   });
 });

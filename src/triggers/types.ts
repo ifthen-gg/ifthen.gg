@@ -16,7 +16,7 @@ export type TriggerTarget = {
   listeners: Partial<
     Record<TriggerName, Array<TriggerCallbackObj[TriggerName]>>
   >;
-  dispatchers: Partial<Record<keyof TriggerObj, () => void>>;
+  cleaners: Partial<Record<keyof TriggerObj, () => void>>;
   addEventListener<Name extends TriggerName>(
     name: Name,
     callback: TriggerCallbackObj[Name]

@@ -18,7 +18,7 @@ const originConsoleError = console.error;
 describe("leagueQueue", () => {
   afterEach(() => {
     triggerTarget.listeners = {};
-    triggerTarget.dispatchers = {};
+    triggerTarget.cleaners = {};
     console.error = originConsoleError;
     // @ts-ignore
     delete overwolf.games;

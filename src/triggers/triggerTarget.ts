@@ -6,11 +6,11 @@ import type { TriggerTarget } from "./types";
 
 const triggerTarget: TriggerTarget = {
   listeners: {},
-  dispatchers: {},
+  cleaners: {},
   addEventListener(name, callback) {
     if (!(name in this.listeners)) {
       this.listeners[name] = [callback];
-      this.dispatchers[name] = triggersObject[name].listen((data) =>
+      this.cleaners[name] = triggersObject[name].listen((data) =>
         this.dispatchEvent(name, data)
       );
     } else {
@@ -25,7 +25,8 @@ const triggerTarget: TriggerTarget = {
       (listener) => listener !== callback
     );
     if (this.listeners[name]!.length === 0) {
-      this.dispatchers[name]!();
+      this.cleaners[name]!();
+      delete this.cleaners[name];
     }
   },
   dispatchEvent(name, data) {
@@ -33,7 +34,7 @@ const triggerTarget: TriggerTarget = {
       return;
     }
     this.listeners[name]!.forEach((listener) => {
-      listener.call(this, data);
+      listener(data);
     });
   },
 };
