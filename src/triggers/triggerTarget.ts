@@ -21,26 +21,20 @@ const triggerTarget: TriggerTarget = {
     if (!(name in this.listeners)) {
       return;
     }
-    const stack = this.listeners[name]!;
-    for (let i = 0, l = stack.length; i < l; i++) {
-      if (stack[i] === callback) {
-        stack.splice(i, 1);
-        if (stack.length === 0) {
-          this.dispatches[name]!();
-        }
-        return;
-      }
+    this.listeners[name] = this.listeners[name]!.filter(
+      (listener) => listener !== callback
+    );
+    if (this.listeners[name]!.length === 0) {
+      this.dispatches[name]!();
     }
   },
   dispatchEvent(name, data) {
     if (!(name in this.listeners)) {
       return;
     }
-    const stack = this.listeners[name]!.slice();
-    for (let i = 0, l = stack.length; i < l; i++) {
-      const listener = stack[i] as (arg: typeof data) => void;
+    this.listeners[name]!.forEach((listener) => {
       listener.call(this, data);
-    }
+    });
   },
 };
 
