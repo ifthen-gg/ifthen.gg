@@ -7,4 +7,5 @@ module.exports = {
       "<rootDir>/fileTransformer.js",
     "\\.(ts|tsx|js|jsx)$": "babel-jest",
   },
+  setupFiles: ["./setup/overwolf.js"],
 };

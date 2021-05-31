@@ -1,0 +1,79 @@
+.outer {
+  background: var(--aside-background-color);
+  padding: 1em;
+}
+
+.inner {
+  background: var(--secondary-background-color);
+  padding: 0.5em;
+  display: grid;
+  row-gap: 1em;
+}
+
+.header {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+  column-gap: 1em;
+}
+
+.header svg {
+  fill: var(--hint-color);
+  height: 100%;
+  width: auto;
+}
+.header__title {
+  font-size: 1em;
+  font-weight: normal;
+}
+.header__description {
+  color: var(--hint-color);
+  font-size: 0.8em;
+}
+
+.searchBar {
+  position: relative;
+  background: var(--hint-color);
+  display: flex;
+  height: 2em;
+  justify-items: stretch;
+}
+
+.searchBar__icon {
+  position: absolute;
+  height: 1em;
+  top: calc(50% - 0.5em);
+  left: 0.2em;
+}
+
+.searchBar__input {
+  padding-left: 2em;
+  padding-right: 0.5em;
+  border: none;
+  background: none;
+  width: 100%;
+  color: var(--text-color);
+}
+
+.searchBar__input::placeholder {
+  color: var(--hover-color);
+}
+
+.appList {
+  display: grid;
+  gap: 0.5em;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.appList__item {
+  background: var(--hint-color);
+  display: grid;
+  place-items: center;
+  row-gap: 0.5em;
+  padding: 0.5em;
+  border: none;
+}
+
+.appList__image {
+  height: 3em;
+}
