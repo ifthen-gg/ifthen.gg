@@ -1,3 +1,30 @@
 .userMenu {
   height: 100%;
+  background: var(--aside-background-color);
+  padding: 1em;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-gap: 1em;
+}
+
+.appletHeadline {
+  padding-bottom: 0.3em;
+}
+
+.applets {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1em;
+}
+
+.applets * {
+  aspect-ratio: 1;
+}
+
+.ad {
+  width: 400px;
+  height: 300px;
+  display: grid;
+  place-items: center;
+  background: var(--primary-background-color);
 }
