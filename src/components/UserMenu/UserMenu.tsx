@@ -1,5 +1,5 @@
 import React from "react";
-import MyApplet, { MyAppletProps } from "../MyApplet/MyApplet";
+import MyApplet from "../MyApplet/MyApplet";
 
 import styles from "./UserMenu.module.css";
 
