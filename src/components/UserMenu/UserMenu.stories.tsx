@@ -96,3 +96,10 @@ export const manyAppletsArgs: UserMenuProps = {
   applets: manyApplets,
 };
 ManyApplets.args = manyAppletsArgs;
+
+export const NoApplets = Template.bind({});
+export const NoAppletsArgs: UserMenuProps = {
+  username: "sirlunchalot619",
+  applets: [],
+};
+NoApplets.args = NoAppletsArgs;

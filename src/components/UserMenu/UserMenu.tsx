@@ -23,7 +23,7 @@ function UserMenu({ username, applets }: UserMenuProps): JSX.Element {
         <h4 className={styles.appletHeadline}>My Applets</h4>
         <div className={styles.appletsContainer}>
           <div className={styles.applets}>
-            {applets
+            {applets.length
               ? applets.map((applet) => (
                   <MyApplet
                     key={applet.text}
