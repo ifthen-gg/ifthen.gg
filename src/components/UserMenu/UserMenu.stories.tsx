@@ -1,6 +1,6 @@
 import React from "react";
 import { Story, Meta } from "@storybook/react";
-import UserMenu, { UserMenuProps } from "./UserMenu";
+import UserMenu, { Applet, UserMenuProps } from "./UserMenu";
 
 export default {
   title: "Common/UserMenu",
@@ -11,29 +11,29 @@ export default {
   },
 } as Meta;
 
+type UserMenuPropsWithoutEvents = Omit<UserMenuProps, "onAppletActiveChange">;
+
 const Template: Story<UserMenuProps> = (args) => (
   <main style={{ height: "100vh" }}>
     <UserMenu {...args} />
   </main>
 );
 
-const defaultApplets = [
+const defaultApplets: Applet[] = [
   {
     active: false,
     color: "#2D89A1",
     text: "If CPU usage is high, then close Chrome.",
-    onActiveChange: console.log,
   },
   {
     active: true,
     color: "#2D89A1",
     text: "If CPU usage is high, then close Chrome.",
-    onActiveChange: console.log,
   },
 ];
 
 export const Default = Template.bind({});
-export const defaultArgs: UserMenuProps = {
+export const defaultArgs: UserMenuPropsWithoutEvents = {
   username: "phlgr",
   applets: defaultApplets,
 };
@@ -91,7 +91,7 @@ const manyApplets = [
 ];
 
 export const ManyApplets = Template.bind({});
-export const manyAppletsArgs: UserMenuProps = {
+export const manyAppletsArgs: UserMenuPropsWithoutEvents = {
   username: "phlgr",
   applets: manyApplets,
 };
