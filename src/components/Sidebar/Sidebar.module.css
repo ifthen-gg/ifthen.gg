@@ -1,5 +1,5 @@
 .sidebar {
-  padding-top: 48px;
+  padding-top: var(--app-bar-height);
   display: flex;
   flex-direction: column;
   justify-content: space-between;

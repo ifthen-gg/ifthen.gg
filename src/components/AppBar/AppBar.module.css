@@ -1,4 +1,5 @@
 .appBar {
+  height: var(--app-bar-height);
   position: fixed;
   width: 100vw;
   display: grid;

@@ -1,10 +1,11 @@
 .userMenu {
   height: 100%;
   background: var(--aside-background-color);
-  padding: 1em;
+  padding: var(--app-bar-height) 1em 1em 1em;
   display: grid;
   grid-template-rows: auto auto 1fr auto;
   gap: 1em;
+  max-width: calc(400px + 2em);
 }
 
 .appletHeadline {
@@ -13,7 +14,6 @@
 
 .applets {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1em;
   overflow-y: auto;
 }
