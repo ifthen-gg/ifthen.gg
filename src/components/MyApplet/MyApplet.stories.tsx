@@ -31,7 +31,6 @@ export const DifferentColor = Template.bind({});
 export const differentColorArgs: MyAppletPropsWithoutEvents = {
   active: true,
   color: "#784A8D",
-  text:
-    'If League of Legends game is starting, then set Status on Slack to "In a Meeting".',
+  text: 'If League of Legends game is starting, then set Status on Slack to "In a Meeting".',
 };
 DifferentColor.args = differentColorArgs;
