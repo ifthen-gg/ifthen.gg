@@ -15,8 +15,7 @@ const Template: Story<DiscoverAppletProps> = (args) => (
 export const League = Template.bind({});
 export const leagueArgs: DiscoverAppletProps = {
   color: "#2C9A5D",
-  text:
-    'If League of Legends game is starting, then set Status on Slack to "In a Meeting".',
+  text: 'If League of Legends game is starting, then set Status on Slack to "In a Meeting".',
   href: "#",
 };
 League.args = leagueArgs;
@@ -32,8 +31,7 @@ Valorant.args = valorantArgs;
 export const TooMuchText = Template.bind({});
 export const tooMuchTextArgs = {
   color: "#AD4138",
-  text:
-    "If CPU usage is high, then close Chrome.If CPU usage is high, then close Chrome.If CPU usage is high, then close Chrome.If CPU usage is high, then close Chrome.If CPU usage is high, then close Chrome.",
+  text: "If CPU usage is high, then close Chrome.If CPU usage is high, then close Chrome.If CPU usage is high, then close Chrome.If CPU usage is high, then close Chrome.If CPU usage is high, then close Chrome.",
   href: "#",
 };
 TooMuchText.args = tooMuchTextArgs;
