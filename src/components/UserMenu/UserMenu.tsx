@@ -11,14 +11,14 @@ export type Applet = {
 
 export type UserMenuProps = {
   username: string;
-  onAppletActiveChange: (text: string, active: boolean) => void;
   applets: Applet[];
+  onAppletActiveChange: (text: string, active: boolean) => void;
 };
 
 function UserMenu({
   username,
-  onAppletActiveChange,
   applets,
+  onAppletActiveChange,
 }: UserMenuProps): JSX.Element {
   return (
     <section className={styles.userMenu}>
