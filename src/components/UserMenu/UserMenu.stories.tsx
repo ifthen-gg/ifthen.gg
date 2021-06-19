@@ -39,54 +39,46 @@ export const defaultArgs: UserMenuPropsWithoutEvents = {
 };
 Default.args = defaultArgs;
 
-const manyApplets = [
+const manyApplets: Applet[] = [
   {
     active: false,
     color: "#2D89A1",
     text: "If CPU usage is high, then close Chrome.",
-    onActiveChange: console.log,
   },
   {
     active: true,
     color: "#2D89A1",
     text: "If CPU usage is high, then close Chrome.",
-    onActiveChange: console.log,
   },
   {
     active: false,
     color: "#2D89A1",
     text: "If CPU usage is high, then close Chrome.",
-    onActiveChange: console.log,
   },
   {
     active: true,
     color: "#2D89A1",
     text: "If CPU usage is high, then close Chrome.",
-    onActiveChange: console.log,
   },
   {
     active: false,
     color: "#2D89A1",
     text: "If CPU usage is high, then close Chrome.",
-    onActiveChange: console.log,
   },
   {
     active: true,
     color: "#2D89A1",
     text: "If CPU usage is high, then close Chrome.",
-    onActiveChange: console.log,
   },
   {
     active: false,
     color: "#2D89A1",
     text: "If CPU usage is high, then close Chrome.",
-    onActiveChange: console.log,
   },
   {
     active: true,
     color: "#2D89A1",
     text: "If CPU usage is high, then close Chrome.",
-    onActiveChange: console.log,
   },
 ];
 
