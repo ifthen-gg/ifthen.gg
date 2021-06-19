@@ -3,8 +3,8 @@
   background: var(--aside-background-color);
   padding: 1em;
   display: grid;
-  grid-template-rows: auto 1fr auto;
-  grid-gap: 1em;
+  grid-template-rows: auto auto 1fr auto;
+  gap: 1em;
 }
 
 .appletHeadline {
@@ -13,12 +13,9 @@
 
 .applets {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1em;
-}
-
-.applets * {
-  aspect-ratio: 1;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1em;
+  overflow-y: auto;
 }
 
 .ad {

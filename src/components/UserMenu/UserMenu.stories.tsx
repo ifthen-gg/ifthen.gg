@@ -47,13 +47,13 @@ const manyApplets: Applet[] = [
   },
   {
     active: true,
-    color: "#2D89A1",
-    text: "If CPU usage is high, then close Chrome.",
+    color: "#a12d71",
+    text: "If League of Legends is started, then start Spotify.",
   },
   {
     active: false,
-    color: "#2D89A1",
-    text: "If CPU usage is high, then close Chrome.",
+    color: "#2da146",
+    text: "If CPU usage is low, start mining.",
   },
   {
     active: true,
