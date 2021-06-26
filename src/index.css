@@ -45,6 +45,9 @@
   /* Fonts */
   --primary-font-family: "Roboto Mono", monospace;
   --secondary-font-family: "Lato", sans-serif;
+
+  /* Misc */
+  --app-bar-height: 48px;
 }
 
 html {

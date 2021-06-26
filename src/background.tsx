@@ -1,6 +1,7 @@
 import openWebsite from "./actions/openWebsite";
 import apps from "./apps";
 import { triggerTarget } from "./triggers";
+import { openWindow } from "./utils/ow";
 
 console.log("Starting background process");
 
@@ -13,5 +14,6 @@ function handleLeagueQueue(queueId: string) {
 }
 
 triggerTarget.addEventListener("leagueQueue", handleLeagueQueue);
+openWindow("desktop");
 
 export {};

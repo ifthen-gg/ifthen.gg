@@ -1,5 +1,6 @@
 .app {
   height: 100%;
   display: grid;
-  grid-auto-flow: column;
+  grid-template-rows: 100%;
+  grid-template-columns: auto 1fr auto;
 }
